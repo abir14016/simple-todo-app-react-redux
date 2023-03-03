@@ -10,4 +10,4 @@ export const initialState = [
         completed: false,
         color: "red"
     },
-]
+];
