@@ -30,9 +30,9 @@ const todoReducer = (state = initialState, action) => {
             });
 
         case COLORSELECTED:
-            const { totoId, color } = action.payLoad;
+            const { todoId, color } = action.payLoad;
             return state.map(todo => {
-                if (todo.id !== totoId) {
+                if (todo.id !== todoId) {
                     return todo
                 }
                 else {
@@ -42,6 +42,7 @@ const todoReducer = (state = initialState, action) => {
                     };
                 };
             });
+
         case DELETED:
             return state.filter(todo => todo.id !== action.payLoad);
 
